@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Kreatif - Produk Lokal Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF7A00',
+                        secondary: '#2C3E50',
+                        accent: '#27AE60',
+                        light: '#F9F9F9',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+            }
+            .btn-hover {
+                @apply transition-all duration-300 hover:brightness-110 hover:scale-105;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-secondary bg-light">
+    <!-- Navigasi -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">UMKM<span class="text-secondary">Kreatif</span></a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex gap-8">
+                <a href="#beranda" class="font-medium hover:text-primary transition-colors">Beranda</a>
+                <a href="#tentang" class="font-medium hover:text-primary transition-colors">Tentang Kami</a>
+                <a href="#produk" class="font-medium hover:text-primary transition-colors">Produk</a>
+                <a href="#kontak" class="font-medium hover:text-primary transition-colors">Kontak</a>
+            </div>
+
+            <!-- Tombol Menu HP -->
+            <button class="md:hidden text-2xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu HP -->
+        <div class="hidden md:hidden bg-white absolute w-full" id="mobileMenu">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="#beranda" class="font-medium py-2 border-b hover:text-primary transition-colors">Beranda</a>
+                <a href="#tentang" class="font-medium py-2 border-b hover:text-primary transition-colors">Tentang Kami</a>
+                <a href="#produk" class="font-medium py-2 border-b hover:text-primary transition-colors">Produk</a>
+                <a href="#kontak" class="font-medium py-2 hover:text-primary transition-colors">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian Beranda -->
+    <section id="beranda" class="pt-32 pb-20 px-4 bg-gradient-to-br from-orange-50 to-amber-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-6">
+                    Produk Lokal <br>
+                    <span class="text-primary">Kualitas Terbaik</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-xl">
+                    Kami menghadirkan produk buatan tangan lokal dengan cinta dan kualitas terbaik. Dukung usaha lokal, nikmati hasil yang istimewa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#produk" class="bg-primary text-white px-8 py-3 rounded-full font-semibold btn-hover">Lihat Produk</a>
+                    <a href="#kontak" class="bg-white text-primary border-2 border-primary px-8 py-3 rounded-full font-semibold btn-hover">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Produk UMKM" class="rounded-2xl shadow-lg w-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Kami -->
+    <section id="tentang" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">Tentang Usaha Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami adalah usaha mikro yang berdedikasi mengembangkan potensi lokal dan memberdayakan masyarakat sekitar.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tentang Kami" class="rounded-2xl shadow-lg w-full object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Menciptakan Nilai dari Karya Lokal</h3>
+                    <p class="text-gray-600 mb-4">
+                        Berdiri sejak tahun 2020, kami berkomitmen menghadirkan produk yang tidak hanya berkualitas, tetapi juga ramah lingkungan dan memberdayakan pengrajin lokal.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Setiap produk yang kami buat diproses dengan teliti, menggunakan bahan pilihan, dan dibuat dengan sepenuh hati untuk memberikan kepuasan bagi setiap pelanggan kami.
+                    </p>
+                    <div class="flex gap-6">
+                        <div class="text-center">
+                            <h4 class="text-3xl font-bold text-primary">500+</h4>
+                            <p class="text-sm text-gray-500">Pelanggan Puas</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-3xl font-bold text-primary">50+</h4>
+                            <p class="text-sm text-gray-500">Jenis Produk</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-3xl font-bold text-primary">5</h4>
+                            <p class="text-sm text-gray-500">Tahun Berdiri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Produk Unggulan -->
+    <section id="produk" class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">Produk Unggulan</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pilihan produk terbaik kami yang dibuat dengan bahan berkualitas dan sentuhan tangan terampil.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Produk 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Produk 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Produk Kreatif 1</h3>
+                        <p class="text-gray-600 mb-4">Deskripsi singkat produk yang menarik dan berkualitas tinggi.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">Rp 50.000</span>
+                            <a href="https://wa.me/6281234567890?text=Saya%20ingin%20memesan%20Produk%20Kreatif%201" class="bg-accent text-white px-4 py-2 rounded-lg text-sm font-medium btn-hover">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Produk 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Produk Kreatif 2</h3>
+                        <p class="text-gray-600 mb-4">Deskripsi singkat produk yang menarik dan berkualitas tinggi.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">Rp 75.000</span>
+                            <a href="https://wa.me/6281234567890?text=Saya%20ingin%20memesan%20Produk%20Kreatif%202" class="bg-accent text-white px-4 py-2 rounded-lg text-sm font-medium btn-hover">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Produk 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Produk Kreatif 3</h3>
+                        <p class="text-gray-600 mb-4">Deskripsi singkat produk yang menarik dan berkualitas tinggi.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">Rp 100.000</span>
+                            <a href="https://wa.me/6281234567890?text=Saya%20ingin%20memesan%20Produk%20Kreatif%203" class="bg-accent text-white px-4 py-2 rounded-lg text-sm font-medium btn-hover">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section id="kontak" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">Hubungi Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ingin memesan dalam jumlah banyak atau bertanya seputar produk? Silakan hubungi kami!</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/3">
+                    <div class="flex items-start gap-4 mb-8">
+                        <div class="text-primary text-2xl mt-1"><i class="fa fa-map-marker"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Alamat</h4>
+                            <p class="text-gray-600">Palembang, Sumatera Selatan, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 mb-8">
+                        <div class="text-primary text-2xl mt-1"><i class="fa fa-whatsapp"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">WhatsApp</h4>
+                            <p class="text-gray-600">+62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 mb-8">
+                        <div class="text-primary text-2xl mt-1"><i class="fa fa-envelope"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Email</h4>
+                            <p class="text-gray-600">umkmkreatif@email.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="text-primary text-2xl mt-1"><i class="fa fa-clock-o"></i></div>
+                        <div>
+                            <h4 class="font-semibold mb-1">Jam Operasional</h4>
+                            <p class="text-gray-600">Senin - Sabtu: 08.00 - 17.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <form action="#" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nomor HP/WA</label>
+                                    <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold btn-hover">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <h3 class="text-2xl font-bold">UMKM<span class="text-primary">Kreatif</span></h3>
+                    <p class="text-gray-300 mt-2">Produk lokal berkualitas, karya anak bangsa.</p>
+                </div>
+                <div class="flex gap-6 text-xl">
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors"><i class="fa fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400 text-sm">
+                © 2026 UMKM Kreatif. Hak cipta dilindungi undang-undang.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tombol WhatsApp Mengambang -->
+    <a href="https://wa.me/628123443" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg z-50 btn-hover">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- Script -->
+    <script>
+        // Menu HP
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tutup menu saat diklik
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Gulir halus
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
